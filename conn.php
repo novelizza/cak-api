@@ -18,3 +18,9 @@ if($dbconn){
 
 echo "<hr />";
 ?>
+
+<html>
+<body>
+<a href="db.sql">IMPORT DB</a>
+</body>
+</html>
