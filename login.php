@@ -9,7 +9,7 @@ if($result){
     while ($row = pg_fetch_assoc($result)){
         $emailNow = $row['email'];
         $nama = $row['nama']
-    }
+    };
     echo json_encode(array(
         'status' => 'ok',
         'email' => $emailNow,
