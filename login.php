@@ -5,13 +5,11 @@ $email = $_GET['email'];
 $password = $_GET['password'];
 
 $result = pg_query($dbconn,"SELECT email, password FROM tb_akun where email='$email' AND password='$password'");
+$data = array($email, $password);
 if($result){
     $res = [
             "status" => "ok",
-            [
-                "email" => $email,
-                "password"=> $password
-            ]
+            "data" => $data
            ];
     echo json_encode($res);
 } else {
