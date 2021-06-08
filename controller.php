@@ -14,12 +14,7 @@ if($result){
     ));
 } else {
     echo json_encode(array(
-        'status' => 'error'
+        'status' => $email
     ));
 }
 ?>
-<html>
-<body>
-<h1>test</h1>
-</body>
-</html>
