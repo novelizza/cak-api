@@ -9,8 +9,7 @@ $dewasa = $_POST['dewasa'];
 $anak = $_POST['anak'];
 $dateNow = date("Y-m-d h:i");
 
-$q1 = "SELECT id_film,hargaDewasa,hargaAnak FROM tb_film where judul='$judul'";
-$resultFilm = pg_query($dbconn,$q1);
+$resultFilm = pg_query($dbconn,"SELECT id_film,hargaDewasa,hargaAnak FROM tb_film where judul='$judul'");
 while ($row1 = pg_fetch_assoc($resultFilm)){
     $id_film = $row1['id_film'];
     $hargaDewasa = $row1['hargaDewasa'];
@@ -19,8 +18,7 @@ while ($row1 = pg_fetch_assoc($resultFilm)){
 
 $hargaTotal = ($dewasa*$hargaDewasa)+($anak*$hargaAnak);
 
-$q2 = "SELECT id_akun FROM tb_akun where email='$email'";
-$resultAkun = pg_query($dbconn,$q2);
+$resultAkun = pg_query($dbconn,"SELECT id_akun FROM tb_akun where email='$email'");
 while ($row2 = pg_fetch_assoc($resultAkun)){
     $id_akun = $row2['id_akun'];
 }
