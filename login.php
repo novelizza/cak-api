@@ -10,6 +10,7 @@ if($result){
             "status" => "ok",
             [
                 "email" => $email,
+                "password"=> $password
             ]
            ];
     echo json_encode($res);
