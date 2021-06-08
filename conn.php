@@ -10,11 +10,11 @@ $pass = "8fa7368ca2f7275872255a7587bb6b0b152629ed6fea4fa99e96dcc7d1be0524";
 $conn = "host={$host} port={$port} dbname={$dbname} user={$user} password={$pass}";
 $dbconn = pg_connect($conn);
 
-if($dbconn){
-    echo "KONEKSI BERHASIL";
-} else {
-    echo "KONEKSI GAGAL";
-}
+// if($dbconn){
+//     echo "KONEKSI BERHASIL";
+// } else {
+//     echo "KONEKSI GAGAL";
+// }
 
-echo "<hr />";
+// echo "<hr />";
 ?>

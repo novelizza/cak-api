@@ -6,7 +6,7 @@
 include_once 'conn.php';
 ?>
 <br>
-<a href="controller.php">Test</a>
+<!-- <a href="controller.php">Test</a> -->
 </center>
 </body>
 </html>
