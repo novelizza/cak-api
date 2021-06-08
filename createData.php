@@ -13,8 +13,7 @@ if($result){
     ));
 } else {
     echo json_encode(array(
-        'email' => $email,
-        'password' => $password,
+        'status' => 'error'
     ));
 }
 ?>
