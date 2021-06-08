@@ -1,9 +1,9 @@
 <?php
 include_once 'conn.php';
 
-$email = $_GET['email'];
-$password = $_GET['password'];
-$name = $_GET['name'];
+$email = $_POST['email'];
+$password = $_POST['password'];
+$name = $_POST['name'];
 $dateNow = date("Y/m/d");
 
 $result = pg_query($dbconn,"INSERT INTO 'tb_akun' ('id_akun', 'email', 'password', 'phone_number', 'nama', 'created_at', 'updated_at')
