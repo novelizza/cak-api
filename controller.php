@@ -12,5 +12,14 @@ if($result){
     echo json_encode(array(
         'status' => 'ok'
     ));
+} else {
+    echo json_encode(array(
+        'status' => 'error'
+    ));
 }
 ?>
+<html>
+<body>
+<h1>test</h1>
+</body>
+</html>
