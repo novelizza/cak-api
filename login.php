@@ -8,8 +8,8 @@ $result = pg_query($dbconn,"SELECT email, password FROM tb_akun where email='$em
 if($result){
     while ($row = pg_fetch_assoc($result)){
         $emailNow = $row['email'];
-        $nama = $row['nama']
-    };
+        $nama = $row['nama'];
+    }
     echo json_encode(array(
         'status' => 'ok',
         'email' => $emailNow,
