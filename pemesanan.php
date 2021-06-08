@@ -9,7 +9,7 @@ $dewasa = $_POST['dewasa'];
 $anak = $_POST['anak'];
 $dateNow = date("Y-m-d h:i");
 
-$resultFilm = pg_query($dbconn,"SELECT "id_film","hargaDewasa","hargaAnak" FROM tb_film where judul='$judul'");
+$resultFilm = pg_query($dbconn,"SELECT 'id_film','hargaDewasa','hargaAnak' FROM tb_film where judul='$judul'");
 while ($row1 = pg_fetch_assoc($resultFilm)){
     $id_film = $row1['id_film'];
     $hargaDewasa = $row1['hargaDewasa'];
