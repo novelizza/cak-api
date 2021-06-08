@@ -23,7 +23,7 @@ while ($row2 = pg_fetch_array($resultAkun)){
     $id_akun = $row2['id_akun'];
 }
 
-$q = "INSERT INTO tb_pembelian (id_pembelian, id_akun, id_film, jenis, taggal, jumlahDewasa, jumlahAnak, hargaTotal, created_at, updated_at) VALUES (DEFAULT, '$id_akun', '$id_film', '$jenis', '$jadwal', '$dewasa', '$anak', '$hargaTotal', 'dateNow', 'dateNow')";
+$q = "INSERT INTO tb_pembelian (id_pembelian, id_akun, id_film, jenis, taggal, jumlahDewasa, jumlahAnak, hargaTotal, created_at, updated_at) VALUES (DEFAULT, '$id_akun', '$id_film', '$jenis', '$jadwal', '$dewasa', '$anak', '$hargaTotal', '$dateNow', '$dateNow')";
 $result = pg_query($dbconn,$q);
 
 if($result){
