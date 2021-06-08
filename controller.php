@@ -1,7 +1,7 @@
 <?php
 include_once 'conn.php';
 
-$email = $_POST['email'];
+$email = $_REQUEST['email'];
 $password = $_GET['password'];
 $nama = $_GET['nama'];
 $dateNow = date("Y-m-d h:i");
