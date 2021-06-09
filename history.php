@@ -5,6 +5,17 @@ $email = $_GET['email'];
 
 $array = array();
 
+class data {
+  
+    // properti
+     var $judul;
+     var $jenis;
+     var $tanggal;
+     var $dewasa;
+     var $anak;
+     var $totalharga;
+  }
+
 $resultAkun = pg_query($dbconn,"SELECT id_akun FROM tb_akun where email='$email'");
 while ($rowAkun = pg_fetch_assoc($resultAkun)){
     $idAkun = $rowAkun['id_akun'];
@@ -26,7 +37,7 @@ if($result){
         $anak = $row['jumlahanak'];
         $totalharga = $row['hargatotal'];
 
-        array_push($array, 'judul' => $judul, $jenis, $tanggal, $dewasa, $anak, $totalharga);
+        array_push($array, ('judul' => $judul), $jenis, $tanggal, $dewasa, $anak, $totalharga);
     }
     echo json_encode(array(
         'status' => 'ok',
