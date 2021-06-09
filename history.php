@@ -14,7 +14,7 @@ $result = pg_query($dbconn,"SELECT * FROM tb_pembelian where id_akun='$idAkun'")
 if($result){
     while ($row = pg_fetch_assoc($result)){
 
-        $resultJudul = pg_query($dbconn,"SELECT judul FROM tb_film where id_film='$id_film'");
+        $resultJudul = pg_query($dbconn,"SELECT judul FROM tb_film where id_film='$row['id_film']'");
         while ($rowJudul = pg_fetch_assoc($resultJudul)){
             $judul = $rowJudul['judul'];
         }
