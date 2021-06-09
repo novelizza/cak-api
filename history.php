@@ -7,7 +7,7 @@ $array = array();
 
 $resultAkun = pg_query($dbconn,"SELECT id_akun FROM tb_akun where email='$email'");
 while ($rowAkun = pg_fetch_assoc($resultAkun)){
-    $idAkunn = $rowAkun['id_akun'];
+    $idAkun = $rowAkun['id_akun'];
 }
 
 $result = pg_query($dbconn,"SELECT * FROM tb_pembelian where id_akun='$idAkun'");
