@@ -31,7 +31,7 @@ if($result){
             $judul = $rowJudul['judul'];
         }
 
-        $id = $row['id'];
+        $id = $row['id_pembelian'];
         $jenis = $row['jenis'];
         $tanggal = $row['taggal'];
         $dewasa = $row['jumlahdewasa'];
