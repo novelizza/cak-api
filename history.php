@@ -1,7 +1,7 @@
 <?php
 include_once 'conn.php';
 
-$email = $_POST['email'];
+$email = $_GET['email'];
 
 $array = array();
 
