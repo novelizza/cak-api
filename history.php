@@ -37,7 +37,15 @@ if($result){
         $anak = $row['jumlahanak'];
         $totalharga = $row['hargatotal'];
 
-        array_push($array, ('judul' => $judul), $jenis, $tanggal, $dewasa, $anak, $totalharga);
+        $data = new data();
+        $data->judul = $judul;
+        $data -> jenis = $jenis;
+        $data -> tanggal = $tanggal;
+        $data -> dewasa = $dewasa;
+        $data -> anak = $anak;
+        $data -> totalharga = $totalharga;
+
+        array_push($array, $data);
     }
     echo json_encode(array(
         'status' => 'ok',
