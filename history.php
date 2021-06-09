@@ -7,7 +7,7 @@ $array = array();
 
 class data {
   
-    // properti
+     var $id;
      var $judul;
      var $jenis;
      var $tanggal;
@@ -31,6 +31,7 @@ if($result){
             $judul = $rowJudul['judul'];
         }
 
+        $id = $row['id'];
         $jenis = $row['jenis'];
         $tanggal = $row['taggal'];
         $dewasa = $row['jumlahdewasa'];
@@ -38,7 +39,8 @@ if($result){
         $totalharga = $row['hargatotal'];
 
         $data = new data();
-        $data->judul = $judul;
+        $data -> id = $id;
+        $data -> judul = $judul;
         $data -> jenis = $jenis;
         $data -> tanggal = $tanggal;
         $data -> dewasa = $dewasa;
