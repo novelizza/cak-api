@@ -47,7 +47,8 @@ if($result){
         $data -> anak = $anak;
         $data -> totalharga = $totalharga;
 
-        array_push($array, $data);
+        // array_push($array, $data);
+        $array[] = $data;
     }
     echo json_encode(array(
         'status' => 'ok',
